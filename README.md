@@ -2,9 +2,9 @@
 
 This project presents a basic linux instance configured to serve a simple web application.
 
-*You can find the server at: 18.220.220.2
-*SSH is enabled there at: port 2200
-*The application is located at the server's root: http://18.220.220.2/
+* You can find the server at: 18.220.220.2
+* SSH is enabled there at: port 2200
+* The application is located at the server's root: http://18.220.220.2/
 
 In order to complete this project, I began with an Amazon Web Services Lightsail instance. 
 
