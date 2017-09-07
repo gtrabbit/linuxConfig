@@ -20,9 +20,35 @@ Finally, I disabled password-based logins.
 
 As grader, I then installed all the software necessary to run the web application. Since Lightsail already came with Python, I began by installing Apache2, then WSGI. Next, I cloned the repository of my Catalog project to a subdirectory in the `/var/www` directory. I then set the apache2 configuration to serve my Catalog project as a WSGI application.
 
-Next, I installed all dependencies for the Catalog project (first installing pip3). This included Flask (and all its dependencies), postgresql and several others. I then made the necessary modifications to my source code to migrate the project from using sql-lite to postgresql. This required creating a postgresql user (also named grader, and with an eponymous password), and creating the initial database via commandline in the psql shell. 
+Next, I installed all dependencies for the Catalog project (first installing pip3). This included Flask (and all its dependencies), postgresql and several others. I then made the necessary modifications to my source code to migrate the project from using sql-lite to postgresql. This required creating a postgresql user (also named grader, and with an eponymous password), and creating the initial database via commandline in the psql shell. To populate the database with starting data, the Catalog requires the RandomWords module, which is used to generate content. With that installed, I ran the load_start_data.py module located in the Git repo. 
 
 To enable OAuth2 login for the application, I generated a new client_secrets file and refactored the python code to point to this file using absolute paths. 
+
+## Dependencies
+
+In configuring this server, I installed/utilized the following software:
+
+### Python Modules
+
+* flask
+* sqlalchemy(.orm)
+* random
+* string
+* httplib2
+* json
+* requests
+* oauth2client(.client)
+* passlib
+* itsDangerous
+* random_words
+
+### Linux packages
+
+* Apache2
+* WSGI (mod_wsgi)
+* pip3
+* ssh-keygen
+* postgresql
 
 ## Epilogue
 
